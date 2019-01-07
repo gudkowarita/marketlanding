@@ -1,7 +1,9 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <style>
 
   .top_back {
@@ -14,7 +16,7 @@ background: url(http://miriadna.com/desctopwalls/images/max/Nanjing,-China.jpg);
     text-align: center;
     width: 1250px;
 height: 97px;
-color: #000000;
+color: #ffffff;
 font-family: "Open Sans";
 font-size: 49px;
 font-weight: 400;
@@ -31,6 +33,16 @@ display: flex;
 flex-direction: column;
 margin: 2px;
 }
+.text-cont4middle {
+   width: 217px;
+height: 44px;
+color: #938e8e;
+font-family: "Open Sans";
+font-size: 15px;
+font-weight: 400;
+padding: 15px 15px 0 15px;
+}
+/*  */
 .container-middle {
 width: 1240px;
 height: 312px;
@@ -46,6 +58,16 @@ box-shadow: 0 5px 0 rgba(29, 70, 48, 0.75);
 background-color: #43a06d;
 margin: 80px 30px 5px 2px;
 padding: 5px 20px 0 15px;
+border-radius: 10px 0;
+}
+.text4icon {
+    color: #ffffff;
+    width: 266px;
+height: 60px;
+font-family: "Open Sans- Semibold";
+font-size: 20px;
+font-weight: 400;
+line-height: 23px;
 }
 .footer {
 width: 1250px;
@@ -60,16 +82,18 @@ font-family: "Open Sans";
 font-size: 14px;
 font-weight: 400;
 line-height: 23px;
+text-align: center;
+padding-top: 8px;
 }
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 750px) {
     .top_back {
         max-width: auto;
-        width: 100%;
+       width: 100%;
         margin: 0;
     }
     .cont4middle {
         max-width: auto;
-        width: 100%;
+       /* width: 100%;*/
         margin: 0;  
     }
     .text-top {
@@ -79,17 +103,44 @@ line-height: 23px;
     }
     .container-middle{
         display: flex;
+        height: 650px;
+        max-width: auto;
         flex-direction: column;
-        align-items: flex-start;    }
-        #12 {
+        align-items: flex-start; 
+        width: 100%;
+           }
+    .icon {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+    }
+        #i12 {
             order: 1;
+            max-width: auto;
+            width: 80%;
         }
-        #13 {
+        #i13 {
             order: 2;
+            max-width: auto;
+            width: 80%;
+            margin-top: 10px;
         }
-        #14 {
+        #i14 {
             order: 14;
+            max-width: auto;
+            width: 80%;
+            margin-top: 10px;
         }
+    .footer {
+        max-width: auto;
+        text-align: center;
+        width: 100%;
+    }
+    .footer-text {
+        max-width: auto;
+        text-align: center;
+        width: 100%;
+    }
 }
   </style>
     <title>Page</title>
@@ -97,15 +148,15 @@ line-height: 23px;
     <body>
       <div class="top_back">
      <div class="text-top">Привет</div>
-      <center> <div class="cont4middle"> it's me
+      <center> <div class="cont4middle"> <div class="text-cont4middle">it's me</div>
             <a href="https://ibb.co/FDwLBxt"><img src="https://i.ibb.co/FDwLBxt/ZAZ-8452.jpg" alt="ZAZ-8452" border="0"></a>
       </div></center>
     </div>
        
        <div class="container-middle">
-    <div class="icon" id="12"><img src="https://maxcdn.icons8.com/Share/icon/win10/User_Interface/in_progress1600.png" width="30" height="30">вгкр пщжкрп  экушрпущхкрп кщжерппш  </div> 
-    <div class="icon" id="13"><img src="https://maxcdn.icons8.com/Share/icon/win10/User_Interface/in_progress1600.png" width="30" height="30">ещшпге0хг  пн5кп895рпе   х8пг85хрнопх85гн </div>
-    <div class="icon" id="14"><img src="https://maxcdn.icons8.com/Share/icon/win10/User_Interface/in_progress1600.png" width="30" height="30">зк5гн09х5гн о960онрг960гон </div>       
+    <div id="i12" class="icon" ><img src="https://maxcdn.icons8.com/Share/icon/win10/User_Interface/in_progress1600.png" width="30" height="30"><br><div class="text4icon">вгкр пщжкрп  экушрпущхкрп кщжерппш</div> </div> 
+    <div id="i13" class="icon" ><img src="https://maxcdn.icons8.com/Share/icon/win10/User_Interface/in_progress1600.png" width="30" height="30"><br><div class="text4icon">ещшпге0хг  пн5кп895рпе   х8пг85хрнопх85гн</div> </div>
+    <div  id="i14" class="icon"><img src="https://maxcdn.icons8.com/Share/icon/win10/User_Interface/in_progress1600.png" width="30" height="30"><br><div class="text4icon">зк5гн09х5гн о960онрг960гон</div></div>       
     </div>
         <div class="footer">
 <div class="footer-text">jghc</div>
