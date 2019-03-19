@@ -94,7 +94,7 @@ background-color:rgba(0,0,0,.3)}
 .cart__body{position:absolute;
 top:50%;
 left:50%;
-width:1024px;
+width:100%;
 min-height:200px;
 max-height:640px;background-color:#fff;
 -webkit-transform:translateX(-50%) translateY(-50%);
