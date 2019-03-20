@@ -48,10 +48,14 @@ window.addEventListener('DOMContentLoaded', () => {
 
       cartWrapper.appendChild(item);
         if (empty) {
-        empty.remove();
+        empty.style.display = 'none';
       }
+
+      calcTotal();
+      removeFromCart();
     });
-  });
+  });//click on add to basket
+
 
   titles.forEach(function(item){   //обрезка строк названий
     if (item.textContent.length < 70 ) {
@@ -82,7 +86,28 @@ window.addEventListener('DOMContentLoaded', () => {
     const items = cartWrapper.querySelectorAll('.goods__item');
     badge.textContent = i + items.length;
   }
-  //setTimeOut(function, 1000)
+
+  function calcTotal() {
+    const prices = document.querySelectorAll('.cart__wrapper > .goods__item > .goods__price > span');
+    let total = 0;
+    prices.forEach(function(item) {
+      total += +item.textContent;
+    });
+    totalCost.textContent = total;
+  }
+
+  function removeFromCart() {
+    const removeBtn = cartWrapper.querySelectorAll('.goods__item-remove');
+    removeBtn.forEach(function(btn) {
+      btn.addEventListener('click', () => {
+          btn.parentElement.remove();
+          calcGoods(0);
+          calcTotal();
+      });
+    });
+  }//function delete from basket
+
 });  //function window onload
 
-//второе видео 1.01.23--чуть пораньше
+//второе видео 1.36.55
+//дз было возвращать empty
