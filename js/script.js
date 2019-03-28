@@ -103,11 +103,14 @@ window.addEventListener('DOMContentLoaded', () => {
           btn.parentElement.remove();
           calcGoods(0);
           calcTotal();
+          emptyBack();
       });
     });
   }//function delete from basket
 
-});  //function window onload
+  function emptyBack() {
+    if (items.length == 0) {cartWrapper.querySelector('.empty').style.display = 'block';}
+  }//как возвращать еmpty???
 
-//второе видео 1.36.55
-//дз было возвращать empty
+});  //end of function window onload
+
