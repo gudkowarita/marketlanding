@@ -1,5 +1,8 @@
 body{margin:0}
 .logo{margin:25px 0}
+:root {
+    --theme_color:  #097db3/*#240c31;*/;
+    }
 .search{
     display:flex;
     margin:0 auto}
@@ -16,7 +19,7 @@ body{margin:0}
     align-items:center;
     width:30px;
     height:30px;
-    background:#dc3e2a;
+    background: var(--theme_color);
     border:none;
     border-radius:0 4px 4px 0;
     cursor:pointer}
@@ -36,13 +39,14 @@ body{margin:0}
     height:10px;
     padding:0 3px;
     text-align:center;
-    background:#dc3e2a;
+    background:var(--theme_color);
     border-radius:8px;
     font-size:10px;
     line-height:11px;
     color:#fff}
 .breadcrumbs{color:rgba(0,0,0,.3)}
 .breadcrumbs a{color:rgba(0,0,0,.3)}
+[alt="like"] {margin: 10%; margin: 10% 10% 10% 30%;}
 .goods{margin-top:25px}
 .goods__wrapper{display:flex;
     flex-wrap:wrap}
@@ -53,7 +57,8 @@ body{margin:0}
     box-shadow:4px 4px 30px rgba(0,0,0,.2);
     border-radius:4px;
     margin-bottom:40px;
-    margin-right:35px;
+    margin-right:auto;
+    margin-left: auto;
     transition:.3s all}
 .goods__item:hover{box-shadow:4px 4px 40px rgba(0,0,0,.3)}
 .goods__item-remove{
@@ -68,11 +73,10 @@ body{margin:0}
     border-radius:100%;
     background-color:#fff;
     cursor:pointer}
-.goods__item-remove:hover{color:#dc3e2a}
+.goods__item-remove:hover{color: var(--theme_color);}
 .goods__img{
-    width:220px;
-    -o-object-fit:cover;
-    object-fit:cover}
+    height: 120px;
+    margin: 2% 20%;}
 .goods__colors{
     font-size:12px;
     text-align:center;
@@ -83,20 +87,20 @@ body{margin:0}
     margin-top:5px}
 .goods__price{
     text-align:center;
-    color:#dc3e2a;
+    color:var(--theme_color);
     margin-top:5px;
     font-weight:700}
 .goods__btn{
     width:100%;
     height:40px;
-    background-color:#dc3e2a;
+    background-color:var(--theme_color);
     border:none;outline:0;
     margin-top:20px;
     color:#fff;
     font-weight:700;
     cursor:pointer}
 .goods__btn:focus{outline:0}
-.goods__btn:hover{box-shadow:0 0 15px rgba(220,62,42,.7)}
+.goods__btn:hover{box-shadow:0 0 15px rgba(228, 77, 165, 0.7)}
 .cart{
     display:none;
     position:fixed;
@@ -117,16 +121,16 @@ body{margin:0}
 .cart__title{font-size:28px;color:rgba(0,0,0,.4)}
 .cart__wrapper{display:flex;flex-wrap:wrap;margin-top:25px}
 .cart__wrapper .empty{font-size:24px;color:rgba(0,0,0,.4)}
-.cart__wrapper .goods__item{margin-right:75px}
+.cart__wrapper .goods__item{margin-right:auto;}
 .cart__close{position:absolute;top:25px;right:25px;cursor:pointer}
 .cart__total{font-size:18px}
-.cart__total span{color:#dc3e2a}
+.cart__total span{color: var(--theme_color)}
 .cart__confirm{
     width:280px;
     height:40px;
     display:block;
     margin:0 auto;
-    background-color:#dc3e2a;
+    background-color:var(--theme_color);
     border:none;
     outline:0;
     margin-top:20px;
@@ -134,7 +138,7 @@ body{margin:0}
         font-weight:700;
 cursor:pointer}
 .cart__confirm:focus{outline:0}
-.cart__confirm:hover{box-shadow:0 0 15px rgba(220,62,42,.7)}
+.cart__confirm:hover{box-shadow:0 0 15px rgba(194, 52, 180,.7)}
 .confirm{
     display:none;
     position:fixed;
@@ -143,3 +147,5 @@ cursor:pointer}
     width:100px;
     height:100px}
 .confirm img{width:100%}
+
+/*#dc3e2a there's a color for rolling back*/
