@@ -106,7 +106,7 @@ body{margin:0}
     font-weight:700;
     cursor:pointer}
 .goods__btn:focus{outline:0}
-.goods__btn:hover{box-shadow:0 0 15px rgba(228, 77, 165, 0.7)}
+.goods__btn:hover{box-shadow:0 0 15px rgba(65, 212, 231, 0.7)}
 .cart{
     display:none;
     position:fixed;
