@@ -35,7 +35,6 @@ window.addEventListener('DOMContentLoaded', () => {
   goodsBtn.forEach(function(btn, i){  //добавление в корзину карточки товара
   	btn.addEventListener('click', () => {
       showConfirm();
-      calcGoods(1);
 	    let item = products[i].cloneNode(true),
 		    trigger = item.querySelector('button'),
 		    removeBtn = document.createElement('div'),
@@ -50,7 +49,7 @@ window.addEventListener('DOMContentLoaded', () => {
         if (empty) {
         empty.style.display = 'none';
       }
-
+      calcGoods();
       calcTotal();
       removeFromCart();
     });
@@ -82,9 +81,10 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   }
   
-  function calcGoods(i) {
+  function calcGoods() {
     const items = cartWrapper.querySelectorAll('.goods__item');
-    badge.textContent = i + items.length;
+    badge.textContent = items.length;
+    if (items.length == 0) {cartWrapper.querySelector('.empty').style.display = 'block';}
   }
 
   function calcTotal() {
@@ -101,16 +101,10 @@ window.addEventListener('DOMContentLoaded', () => {
     removeBtn.forEach(function(btn) {
       btn.addEventListener('click', () => {
           btn.parentElement.remove();
-          calcGoods(0);
+          calcGoods();
           calcTotal();
-          emptyBack();
       });
     });
   }//function delete from basket
 
-  function emptyBack() {
-    if (items.length == 0) {cartWrapper.querySelector('.empty').style.display = 'block';}
-  }//как возвращать еmpty???
-
-});  //end of function window onload
-
+});  //function window onload
