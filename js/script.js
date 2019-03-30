@@ -1,34 +1,4 @@
  window.addEventListener('DOMContentLoaded', () => {
-
-const loadContent = async (url, callback) => {
-  await fetch(url) //promise
-    .then(response => response.json()) 
-    .then(json => createElement(json.goods));
-
-  callback();
-}
-
-function createElement(arr) {
-  const goodsWrapper = document.querySelector('.goods__wrapper');
-  arr.forEach(function(item) {
-    let card = document.createElement('div');
-    card.classList.add('goods__item');
-    card.innerHTML = `
-    <img class="goods__img" src="${item.url}" alt="phone">
-    <div class="goods__colors">Доступно цветов: 4</div>
-    <div class="goods__title">
-        ${item.title}
-    </div>
-    <div class="goods__price">
-        <span>${item.price}</span> руб/шт
-    </div>
-    <button class="goods__btn">Добавить в корзину</button>
-    `;
-    goodsWrapper.appendChild(card);
-  });
-}
-
-loadContent('js/db.json', () => {
   const cartWrapper = document.querySelector('.cart__wrapper'),
    cart = document.querySelector('.cart'),
       //кнопка закрытия корзины
@@ -136,18 +106,5 @@ loadContent('js/db.json', () => {
     });
   }//function delete from basket
 
-});// function load content
-
 });  //function window onload
 
-/*
-const example = {username: "ivan"};
-
-fetch('https://jsonplaceholder.typicode.com/posts', 
-  {//две строки внизу - для отправки на сервер
-      method: "POST",
-      body: JSON.stringify(example)
-  }) //promise, то что ниже - для получения
-  .then(response => response.json()) //turn to js format if it's ok
-  .then(json => console.log(json)) //using data from previous step
-//end of fetch */
