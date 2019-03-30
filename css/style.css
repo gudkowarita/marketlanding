@@ -76,13 +76,7 @@ body{margin:0}
 .goods__item-remove:hover{color: var(--theme_color);}
 .goods__img{
     height: 120px;
-    margin: 2% 20%;}
-[src*="two"] {margin-left: 13%;
-    height: 100px;
-    margin-top: 22px;}
-[src*="four"] {margin-left: 8%;}
-[src*="seven"],[src*="eight"],[src*="three"] {margin-left: 10%;}
-.g {margin-left: 10%;}
+    margin: 2% auto;}
 .goods__colors{
     font-size:12px;
     text-align:center;
